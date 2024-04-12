@@ -9,49 +9,46 @@
 
   <body>
     <div class="error">Error en estructura</div>
-    <h1 class="text">Calculadora</h1>
+    <section class="calculadora">
+      <h1 class="text">Calculadora</h1>
 
-    <div class="bar">
-      <div class="text show-result">Resultado</div>
-      <button id="borrar" class="text"><-</button>
-    </div>
-    <div class="table">
-      <table>
-      <tr>
-        <td id="porcen">%</td>
-        <td id="divi">/</td>
-        <td id="multi">x</td>
-        <td id="resta">-</td>
-        <td id="reset-c">C</td>
-      </tr>
-      <tr>
-        <td id="num-7">7</td>
-        <td id="num-8">8</td>
-        <td id="num-9">9</td>
-        <td id="suma" rowspan="2">+</td>
-        <td id="reset-ce">AC</td>
-      </tr>
-      <tr>
-        <td id="num-4">4</td>
-        <td id="num-5">5</td>
-        <td id="num-6">6</td>
-        <td>(</td>
-      </tr>
-      <tr>
-        <td id="num-1">1</td>
-        <td id="num-2">2</td>
-        <td id="num-3">3</td>
-        <td id="igual" rowspan="2">=</td>
-        <td>)</td>
-      </tr>
-      <tr>
-        <td id="num-0" colspan="2">0</td>
-        <td id="punto">.</td>
-        <td id="signo">+/-</td>
-      </tr>
-    </table>
-    </div>
-
-    <script src="app.js"></script>
+      <div class="bar">
+        <div class="text show-result">0.00</div>
+        <button id="borrar" class="text"><-</button>
+      </div>
+      <div class="table">
+        <table>
+          <tr>
+            <td id="reset">C</td>
+            <td id="op-0">/</td>
+            <td id="op-1">x</td>
+            <td id="op-2">-</td>
+            <td id="historial" rowspan="5">Historial</td>
+          </tr>
+          <tr>
+            <td id="num-7">7</td>
+            <td id="num-8">8</td>
+            <td id="num-9">9</td>
+            <td id="op-3" rowspan="2">+</td>
+          </tr>
+          <tr>
+            <td id="num-4">4</td>
+            <td id="num-5">5</td>
+            <td id="num-6">6</td>
+          </tr>
+          <tr>
+            <td id="num-1">1</td>
+            <td id="num-2">2</td>
+            <td id="num-3">3</td>
+            <td id="igual" rowspan="2">=</td>
+          </tr>
+          <tr>
+            <td id="num-0" colspan="2">0</td>
+            <td id="punto">.</td>
+          </tr>
+        </table>
+      </div>
+    </section>
+    <script src="script.js"></script>
   </body>
 </html>
