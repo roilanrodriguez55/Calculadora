@@ -1,18 +1,35 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
   user-select: none;
 }
 
 body {
   background-color: rgb(0, 168, 190);
-  height: 100vh;
+  min-height: 400px;
   display: flex;
   flex-direction: column;
   align-items: center;
   min-width: 320px;
   padding: 0 20px 20px 20px;
+  box-sizing: border-box;
+}
+
+.error {
+  display: none;
+  width: 100vw;
+  height: 80px;
+  line-height: 80px;
+  background-color: red;
+  color: white;
+  text-align: center;
+  font-size: 30px;
+  font-family: "ProtestRiot-Regular";
+}
+
+/* Para mostrar el error */
+.show {
+  display: block;
 }
 
 .calculadora {
@@ -22,17 +39,11 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-top: 50px;
   box-sizing: border-box;
 }
 
-#historial {
-  writing-mode: vertical-rl;
-  -webkit-writing-mode: vertical-rl;
-  -ms-writing-mode: vertical-rl;
-}
-
 @font-face {
-  /* Se usa para establecer una ruta a un tipo de fuente personalizada */
   font-family: "ProtestRiot-Regular";
   src: url(fonts/ProtestRiot-Regular.ttf);
 }
@@ -63,7 +74,6 @@ body {
   max-width: 800px;
   margin: 10px 5px;
   text-align: left;
-  
 }
 
 #borrar {
@@ -72,6 +82,7 @@ body {
   margin-bottom: 10px;
   height: 100px;
 }
+
 #borrar:hover {
   cursor: pointer;
 }
@@ -113,26 +124,70 @@ table td::selection {
   background-color: rgb(0, 168, 190);
 }
 
-.error {
+.historial-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-width: 320px;
+  max-width: 800px;
+  height: auto;
+  margin-top: 10px;
+  padding: 10px;
+  border: 1px solid white;
+  border-radius: 5px;
+  font-family: "ProtestRiot-Regular", "Segoe UI", Tahoma, Geneva, Verdana,
+    sans-serif;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.historial-container h2 {
+  color: white;
+  text-align: center;
+  letter-spacing: 2px;
+}
+
+.item-historial {
+  color: white;
+  font-size: 25px;
+  height: 40px;
+  border-radius: 2px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -o-border-radius: 2px;
+}
+
+#reset-historial {
+  color: white;
+  background-color: rgb(64, 186, 202);
+  font-size: 20px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 10px;
+  height: 40px;
+  border: none;
+  border-radius: 2px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -o-border-radius: 2px;
+}
+
+#reset-historial:hover {
+  cursor: pointer;
+}
+
+#historial {
+  list-style: none;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100vw;
-  height: 60px;
-  position: relative;
-  top: -860px;
-  background-color: red;
-  color: white;
-  font-family: "ProtestRiot-Regular";
-  transition: 0.3s;
-  -webkit-transition: 0.3s;
-  -moz-transition: 0.3s;
-  -ms-transition: 0.3s;
-  -o-transition: 0.3s;
-  font-size: 30px;
-}
-
-/* Para mostrar el error */
-.show {
-  top: 0;
+  flex-direction: column;
+  min-width: 320px;
+  margin-top: 10px;
+  font-size: 50px;
 }

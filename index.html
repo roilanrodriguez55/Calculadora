@@ -8,10 +8,9 @@
   </head>
 
   <body>
-    <div class="error">Error en estructura</div>
+    <div class="error"></div>
     <section class="calculadora">
       <h1 class="text">Calculadora</h1>
-
       <div class="bar">
         <div class="text show-result">0.00</div>
         <button id="borrar" class="text"><-</button>
@@ -23,7 +22,6 @@
             <td id="op-0">/</td>
             <td id="op-1">x</td>
             <td id="op-2">-</td>
-            <td id="historial" rowspan="5">Historial</td>
           </tr>
           <tr>
             <td id="num-7">7</td>
@@ -48,6 +46,11 @@
           </tr>
         </table>
       </div>
+      <section class="historial-container">
+        <h2>Historial</h2>
+        <ul id="historial"></ul>
+        <button id="reset-historial">Eliminar Historial</button>
+      </section>
     </section>
     <script src="script.js"></script>
   </body>
